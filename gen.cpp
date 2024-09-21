@@ -8,7 +8,7 @@ int main() {
     LLVMContext C;
     Module M("helloworld", C);
 
-    // Create the `int main()` function, which is the entry point to the Hello World appplication.
+    // Create the `int main()` function, which is the entry point to the Hello World application.
     Function *main =
             Function::Create(FunctionType::get(Type::getInt32Ty(C), false),
                              GlobalValue::ExternalLinkage, "main", M);
