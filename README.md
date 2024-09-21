@@ -8,7 +8,7 @@ This repository contains two simple "Hello World" examples to help get started w
 # Installing LLVM
 
 There is an automatic installation script available to easily install
-LLVM on Ubuntu/Debian systems available [here](https://apt.llvm.org/), for 
+LLVM on Ubuntu/Debian systems available [here](https://apt.llvm.org/), for
 example to install LLVM 19:
 
 ```shell
@@ -48,7 +48,7 @@ $ clang++ `llvm-config --ldflags` -o gen gen.o `llvm-config --libs core`
 $ ./gen | lli
 ```
 
-Note how the [`llvm-config` tool](https://llvm.org/docs/CommandGuide/llvm-config.html) can be used to 
+Note how the [`llvm-config` tool](https://llvm.org/docs/CommandGuide/llvm-config.html) can be used to
 generate the necessary compiler and linker flags, for compiling & linking against LLVM.
 
 ## cmake project

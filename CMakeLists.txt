@@ -18,5 +18,5 @@ llvm_map_components_to_libnames(llvm_libs
         ${LLVM_TARGETS_TO_BUILD}
         core
         # Add other LLVM library components here
-        )
+)
 target_link_libraries(gen ${llvm_libs})
