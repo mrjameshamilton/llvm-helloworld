@@ -9,12 +9,12 @@ This repository contains two simple "Hello World" examples to help get started w
 
 There is an automatic installation script available to easily install
 LLVM on Ubuntu/Debian systems available [here](https://apt.llvm.org/), for 
-example to install LLVM 18:
+example to install LLVM 19:
 
 ```shell
 $ wget https://apt.llvm.org/llvm.sh
 $ chmod +x llvm.sh
-$ ./llvm.sh 18
+$ ./llvm.sh 19
 ```
 
 # Executing `helloworld.ll`
