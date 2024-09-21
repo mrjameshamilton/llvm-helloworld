@@ -35,11 +35,28 @@ $ ./helloworld
 # Building the generator
 
 The small C++ example demonstrates the basic use of the LLVM C++ API,
-specially the IRBuilder to generate LLVM IR.
+specifically the [IRBuilder](https://llvm.org/doxygen/classllvm_1_1IRBuilder.html) to generate LLVM IR.
+
+## clang++ command line
+
+```shell
+# Compile the source to an object file.
+$ clang++ `llvm-config --cxxflags` -o gen.o -c gen.cpp
+# Link the object file with the LLVM libraries
+$ clang++ `llvm-config --ldflags` -o gen gen.o `llvm-config --libs core` 
+# Execute the generator and pipe the output to the LLVM IR interpreter.
+$ ./gen | lli
+```
+
+Note how the [`llvm-config` tool](https://llvm.org/docs/CommandGuide/llvm-config.html) can be used to 
+generate the necessary compiler and linker flags, for compiling & linking against LLVM.
+
+## cmake project
 
 ```shell
 $ mkdir -p build
 $ cmake -S . -B build -G Ninja
 $ ninja -C build
+# Execute the generator and pipe the output to the LLVM IR interpreter.
 $ build/gen | lli
 ```

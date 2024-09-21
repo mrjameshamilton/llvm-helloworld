@@ -16,12 +16,7 @@ add_executable(gen gen.cpp)
 
 llvm_map_components_to_libnames(llvm_libs
         ${LLVM_TARGETS_TO_BUILD}
-        orcjit
-        support
         core
-        irreader
-        codegen
-        mc
-        mcparser
-        option)
+        # Add other LLVM library components here
+        )
 target_link_libraries(gen ${llvm_libs})
